@@ -4,6 +4,14 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <main className={styles.main}>
+      <div>
+        <Image
+          src="/frontend/src/app/favicon.svg"
+          alt=""
+          width={200}
+          height={200}
+        />
+      </div>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
