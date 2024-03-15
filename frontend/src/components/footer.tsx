@@ -2,43 +2,74 @@ import React from 'react'
 import { useState } from 'react'
 
 import Modal from './modal'
+import CopyButton from './copyButton'
 
 const Footer: React.FC = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showCopyrightModal, setShowCopyrightModal] = useState(false)
+  const [showGuideModal, setShowGuideModal] = useState(false)
+  const [showContactModal, setShowContactModal] = useState(false)
 
-  const toggleModal = () => {
-    setShowModal(!showModal)
+  const toggleCopyrightModal = () => {
+    setShowCopyrightModal(!showCopyrightModal)
+  }
+
+  const toggleGuideModal = () => {
+    setShowGuideModal(!showGuideModal)
+  }
+
+  const toggleContactModal = () => {
+    setShowContactModal(!showContactModal)
   }
   return (
-    <div className="bg-gray-light">
-      <div className="flex flex-col mx-3 bg-gray-light rounded-lg">
+    <div className="bg-gray-100">
+      <div className="flex flex-col rounded-t-full bg-gradient-to-r from-yellow-50 via-cyan-50 to-lime-50">
         <div className="w-full draggable">
           <div className="container flex flex-col mx-auto">
             <div className="flex flex-col items-center w-full my-4">
-              <div className="mb-4">asd</div>
               <div className="flex flex-col items-center gap-2">
-                <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-12 gap-y-3 lg:flex-nowrap text-dark-grey-900">
+                <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-12 gap-y-3 lg:flex-nowrap">
                   <button
-                    className="text-gray-600 hover:text-gray-900"
-                    onClick={toggleModal}
+                    className="text-gray-900 hover:text-yellow-400"
+                    onClick={toggleCopyrightModal}
                   >
                     版权声明
                   </button>
-                  {showModal && <Modal onClose={toggleModal} />}
-                  <a href="/" className="text-gray-600 hover:text-gray-900">
-                    Features
-                  </a>
-                  <a href="/" className="text-gray-600 hover:text-gray-900">
-                    Blog
-                  </a>
-                  <a href="/" className="text-gray-600 hover:text-gray-900">
-                    Resources
-                  </a>
-                  <a href="/" className="text-gray-600 hover:text-gray-900">
-                    Partners
-                  </a>
+                  {showCopyrightModal && (
+                    <Modal
+                      onClose={toggleCopyrightModal}
+                      title="版权声明"
+                      buttonText="我已了解"
+                    >
+                      <p>版权声明版权声明版权声明</p>
+                      <p>版权声明版权声明版权声明</p>
+                      <p>版权声明版权声明版权声明</p>
+                      <p>版权声明版权声明版权声明</p>
+                      <p>版权声明版权声明版权声明</p>
+                    </Modal>
+                  )}
+                  <button
+                    className="text-gray-900 hover:text-yellow-400"
+                    onClick={toggleContactModal}
+                  >
+                    联系方式
+                  </button>
+                  {showContactModal && (
+                    <Modal
+                      onClose={toggleContactModal}
+                      title="联系方式"
+                      buttonText="确定"
+                    >
+                      <span className="flex items-center justify-center pb-8">
+                        业务联系 或 侵权投诉 请联系
+                      </span>
+                      <CopyButton text="yinxing233@sina.com" />
+                      <span className="flex items-center justify-center pt-8 cursor-not-allowed">
+                        点击邮箱复制
+                      </span>
+                    </Modal>
+                  )}
                 </div>
-                <div className="flex items-center gap-8 mb-2">
+                <div className="flex items-center gap-8 mb-2 text-gray-900 hover:text-yellow-400">
                   <a
                     href="https://github.com/yinxing233"
                     className="text-grey-700 hover:text-grey-900"
@@ -59,14 +90,11 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-2 gap-y-3 lg:flex-nowrap">
-                <a href="/" className="text-gray-600 hover:text-amber-300">
+                <a href="/" className="text-gray-900 hover:text-yellow-400">
                   备案111111111111111
                 </a>
-                <a href="/" className="text-gray-600 hover:text-amber-300">
+                <a href="/" className="text-gray-900 hover:text-yellow-400">
                   备案222222222222222
-                </a>
-                <a href="/" className="text-gray-600 hover:text-amber-300">
-                  银杏的博客
                 </a>
               </div>
             </div>
