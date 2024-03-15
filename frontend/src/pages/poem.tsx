@@ -1,5 +1,7 @@
 // pages/poem.tsx
-
+import Header from '@/components/header'
+import Content from '@/components/content'
+import Footer from '@/components/footer'
 import Link from 'next/link'
 
 // 模拟诗词数据
@@ -12,22 +14,26 @@ const poems = [
 const PoemListPage = () => {
   return (
     <div>
-      <h1>Poem List</h1>
-      <ul>
-        {poems.map((poem) => (
-          <li key={poem.id}>
-            {/* 将整个诗词对象传递给诗词详情页面 */}
-            <Link
-              href={{
-                pathname: '/poem/[id]',
-                query: { id: poem.id, content: poem.content },
-              }}
-            >
-              {poem.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Header />
+      <Content>
+        <h1>Poem List</h1>
+        <ul>
+          {poems.map((poem) => (
+            <li key={poem.id}>
+              {/* 将整个诗词对象传递给诗词详情页面 */}
+              <Link
+                href={{
+                  pathname: '/poem/[id]',
+                  query: { id: poem.id, content: poem.content },
+                }}
+              >
+                {poem.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Content>
+      <Footer />
     </div>
   )
 }

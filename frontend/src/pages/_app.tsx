@@ -1,7 +1,8 @@
 //进行全局的定制和配置
 import React from 'react'
 import { AppProps } from 'next/app'
-import '../assets/css/index.css' // 导入重置样式表
+import 'tailwindcss/tailwind.css' //引入tailwind
+import '../styles/index.css' // 引入重置样式表
 
 function YxBlogApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

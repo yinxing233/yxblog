@@ -1,6 +1,8 @@
 // pages/poem/[id].tsx
-
 import { useRouter } from 'next/router'
+
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 
 const PoemDetailPage = () => {
   const router = useRouter()
@@ -8,9 +10,11 @@ const PoemDetailPage = () => {
 
   return (
     <div>
+      <Header />
       <h1>Poem Detail</h1>
       <p>Poem ID: {id}</p>
       <p>Poem Content: {content}</p> {/* 显示诗词内容 */}
+      <Footer></Footer>
     </div>
   )
 }
