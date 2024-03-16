@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           className="relative bg-cover bg-center w-full h-screen flex flex-col justify-center items-center"
           style={{ backgroundImage: "url('/image/bg.png')" }}
         >
-          <h1 className="relative mb-8 text-white text-5xl ">如梦令·秋</h1>
+          <h1 className="relative mb-4 text-white text-5xl ">如梦令·秋</h1>
           <h5 className="relative mb-8 text-white text-xl rounded-lg bg-black bg-opacity-50 p-4">
             碎影浮光轻巧，绿水艳阳秋好。
             <br />

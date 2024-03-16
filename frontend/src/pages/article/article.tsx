@@ -6,6 +6,9 @@ const ArticleListPage = () => {
     <div>
       <Header />
       <Content>
+        <h1>top banners</h1>
+      </Content>
+      <Content>
         <h1>Article List</h1>
       </Content>
       <Footer />

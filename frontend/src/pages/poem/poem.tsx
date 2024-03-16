@@ -17,13 +17,17 @@ const PoemListPage = () => {
       <Header />
       <Content>
         <h1>Poem List</h1>
+        <h1>Poem List</h1>
+        <h1>Poem List</h1>
+        <h1>Poem List</h1>
+        <h1>Poem List</h1>
         <ul>
           {poems.map((poem) => (
             <li key={poem.id}>
               {/* 将整个诗词对象传递给诗词详情页面 */}
               <Link
                 href={{
-                  pathname: '/poem/[id]',
+                  pathname: '/poem/cpns/[id]',
                   query: { id: poem.id, content: poem.content },
                 }}
               >
