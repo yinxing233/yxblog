@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Image from 'next/image'
 
 import Modal from './modal'
 import CopyButton from './copyButton'
@@ -59,11 +60,17 @@ const Footer: React.FC = () => {
                       title="联系方式"
                       buttonText="确定"
                     >
-                      <span className="flex items-center justify-center pb-8">
-                        业务联系 或 侵权投诉 请联系
-                      </span>
+                      <div className="relative mb-4 flex items-center justify-center">
+                        <Image
+                          src={'/image/avatar.jpg'}
+                          alt="头像"
+                          width={200}
+                          height={200}
+                          className="flex rounded-full mx-20"
+                        />
+                      </div>
                       <CopyButton text="yinxing233@sina.com" />
-                      <span className="flex items-center justify-center pt-8 cursor-not-allowed">
+                      <span className="flex items-center justify-center pt-4 cursor-not-allowed">
                         点击邮箱复制
                       </span>
                     </Modal>
@@ -89,14 +96,11 @@ const Footer: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-2 gap-y-3 lg:flex-nowrap">
+              {/* <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-2 gap-y-3 lg:flex-nowrap">
                 <a href="/" className="text-gray-900 hover:text-yellow-400">
-                  备案111111111111111
+                  备案号
                 </a>
-                <a href="/" className="text-gray-900 hover:text-yellow-400">
-                  备案222222222222222
-                </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

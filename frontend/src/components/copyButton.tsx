@@ -19,7 +19,7 @@ const CopyableText: React.FC<{ text: string }> = ({ text }) => {
   }
 
   return (
-    <div className="relative">
+    <div className="relative flex items-center justify-center">
       <button
         onClick={handleCopy}
         className="text-blue-500 border border-blue-500 rounded-md px-3 py-1"

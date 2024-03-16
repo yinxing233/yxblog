@@ -4,12 +4,18 @@
 
 /* 在全局样式中定义字体 */
 @font-face {
-  font-family: 'Maoti';
-  src: url('/font/maoti.ttf') format('truetype');
+  font-family: 'MaShanZheng';
+  src: url('/font/MaShanZheng.ttf') format('truetype');
 }
 
-.text-maoti {
-  font-family: 'Maoti', sans-serif;
+.text-msz {
+  font-family: 'MaShanZheng', sans-serif;
+}
+
+html,
+body {
+  font-family: 'MaShanZheng', sans-serif;
+  /* 添加其他全局样式 */
 }
 
 /* 在全局样式中定义滚动条样式 */

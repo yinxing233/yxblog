@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const Header: React.FC = () => {
+  //移动端标签
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -15,6 +16,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="absolute z-10 w-full h-16 text-white hover:bg-gray-600 duration-500">
+      <title>银杏的博客</title>
       <nav className="container mx-auto px-6 h-full">
         <div className="flex items-center justify-between h-full">
           <div className="text-white font-bold text-2xl">
@@ -25,9 +27,9 @@ const Header: React.FC = () => {
               <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
                 <Link href="/">首页</Link>
               </li>
-              <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
+              {/* <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
                 <Link href="/article">文章</Link>
-              </li>
+              </li> */}
               <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
                 <Link href="/poem">诗词</Link>
               </li>
@@ -78,14 +80,14 @@ const Header: React.FC = () => {
                 首页
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/article"
                 className="block px-12 py-4 text-white text-xl"
               >
                 文章
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 href="/poem"
