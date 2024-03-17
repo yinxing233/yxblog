@@ -1,3 +1,4 @@
+//标题变化
 let titleTime: ReturnType<typeof setTimeout> | undefined
 let originTitle: string
 
@@ -9,7 +10,7 @@ if (typeof window !== 'undefined') {
       document.title = 'w(ﾟДﾟ)w 不要走！再看看嘛！'
       clearTimeout(titleTime!)
     } else {
-      document.title = '♪(^∇^*)欢迎肥来！'
+      document.title = '♪(^∇^*)欢迎回来！'
       titleTime = setTimeout(function () {
         document.title = originTitle
       }, 2000)

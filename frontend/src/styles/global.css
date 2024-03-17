@@ -12,12 +12,6 @@
   font-family: 'MaShanZheng', sans-serif;
 }
 
-html,
-body {
-  font-family: 'MaShanZheng', sans-serif;
-  /* 添加其他全局样式 */
-}
-
 /* 在全局样式中定义滚动条样式 */
 ::-webkit-scrollbar {
   width: 10px; /* 滚动条宽度 */

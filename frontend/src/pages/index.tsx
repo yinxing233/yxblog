@@ -31,7 +31,7 @@ const Home: React.FC = () => {
           </h5>
         </div>
       </Content>
-      <Content>内容</Content>
+      {/* <Content>内容</Content> */}
       <Footer />
     </div>
   )

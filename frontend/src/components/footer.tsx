@@ -41,11 +41,18 @@ const Footer: React.FC = () => {
                       title="版权声明"
                       buttonText="我已了解"
                     >
-                      <p>版权声明版权声明版权声明</p>
-                      <p>版权声明版权声明版权声明</p>
-                      <p>版权声明版权声明版权声明</p>
-                      <p>版权声明版权声明版权声明</p>
-                      <p>版权声明版权声明版权声明</p>
+                      <span>最后更新时间：2023年3月</span>
+                      <ul className="flex flex-col p-2">
+                        <li className="list-disc p-2">
+                          本博客提供的所有内容中有部分来源于互联网，如有侵权请联系删除。
+                        </li>
+                        <li className="list-disc p-2">
+                          如需转载本博客的原创内容，请标注作者名与链接。禁止用于任何商业用途。
+                        </li>
+                        <li className="list-disc p-2">
+                          转载请署名：银杏233或yinxing233，并链接到本博客。
+                        </li>
+                      </ul>
                     </Modal>
                   )}
                   <button

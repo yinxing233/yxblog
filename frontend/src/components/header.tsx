@@ -33,9 +33,9 @@ const Header: React.FC = () => {
               <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
                 <Link href="/poem">诗词</Link>
               </li>
-              <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
+              {/* <li className="flex w-20 items-center justify-center h-full hover:bg-gray-700 text-white text-lg">
                 <a href="#">留言</a>
-              </li>
+              </li> */}
               <li className="ml-4 rounded-full overflow-hidden">
                 <Image
                   src={'/image/avatar.jpg'}
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
             你 好
           </div>
           <ul className="mt-4 space-y-4">
-            <li>
+            <li className="hover:bg-gray-700 text-white text-lg">
               <Link
                 href="/"
                 className="block px-12 pt-10 pb-4 text-white text-xl"
@@ -96,11 +96,11 @@ const Header: React.FC = () => {
                 诗词
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="#" className="block px-12 py-4 text-white text-xl">
                 留言
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         {showMobileMenu && (
