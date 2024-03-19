@@ -4,6 +4,7 @@ import { AppProps } from 'next/app'
 
 //css
 import 'tailwindcss/tailwind.css' //引入tailwind
+import 'animate.css' //引入动画
 import '../styles/index.css' // 引入重置样式表
 
 //ts

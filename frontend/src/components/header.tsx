@@ -68,40 +68,44 @@ const Header: React.FC = () => {
         <div
           className={`mobile-menu fixed inset-y-0 left-0 w-60 bg-gray-900 z-50 transform transition overflow-x-hidden duration-500 ${showMobileMenu ? 'translate-x-0' : '-translate-x-full'} md:hidden`}
         >
-          <div className="flex w-full mt-5 text-2xl items-center justify-center">
-            你 好
+          <div
+            className="relative bg-cover bg-center w-full h-screen flex flex-col"
+            style={{ backgroundImage: "url('/image/bgm5.jpg')" }}
+          >
+            <div className="flex flex-col h-full bg-black bg-opacity-20">
+              <div className="flex w-full mt-5 text-2xl items-center justify-center">
+                你 好
+              </div>
+              <ul className="mt-4 space-y-4 border-t-2 w-1/2 mx-auto">
+                <li className="text-white text-lg">
+                  <Link
+                    href="/"
+                    className="block pt-10 pb-4 text-white text-xl"
+                  >
+                    首页
+                  </Link>
+                </li>
+                {/* <li>
+          <Link
+            href="/article"
+            className="block px-12 py-4 text-white text-xl"
+          >
+            文章
+          </Link>
+        </li> */}
+                <li>
+                  <Link href="/poem" className="block py-4 text-white text-xl">
+                    诗词
+                  </Link>
+                </li>
+                {/* <li>
+          <Link href="#" className="block px-12 py-4 text-white text-xl">
+            留言
+          </Link>
+        </li> */}
+              </ul>
+            </div>
           </div>
-          <ul className="mt-4 space-y-4">
-            <li className="hover:bg-gray-700 text-white text-lg">
-              <Link
-                href="/"
-                className="block px-12 pt-10 pb-4 text-white text-xl"
-              >
-                首页
-              </Link>
-            </li>
-            {/* <li>
-              <Link
-                href="/article"
-                className="block px-12 py-4 text-white text-xl"
-              >
-                文章
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                href="/poem"
-                className="block px-12 py-4 text-white text-xl"
-              >
-                诗词
-              </Link>
-            </li>
-            {/* <li>
-              <Link href="#" className="block px-12 py-4 text-white text-xl">
-                留言
-              </Link>
-            </li> */}
-          </ul>
         </div>
         {showMobileMenu && (
           <div

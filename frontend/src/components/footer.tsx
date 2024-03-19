@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                       <span>最后更新时间：2023年3月</span>
                       <ul className="flex flex-col p-2">
                         <li className="list-disc p-2">
-                          本博客提供的所有内容中有部分来源于互联网，如有侵权请联系删除。
+                          本博客提供的内容中有部分来源于互联网，如有侵权请联系删除。
                         </li>
                         <li className="list-disc p-2">
                           如需转载本博客的原创内容，请标注作者名与链接。禁止用于任何商业用途。
