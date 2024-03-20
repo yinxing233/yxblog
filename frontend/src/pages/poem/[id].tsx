@@ -2,7 +2,6 @@
 import { useRouter } from 'next/router'
 
 import Header from '@/components/header'
-import Content from '@/components/content'
 import Footer from '@/components/footer'
 
 const PoemDetailPage = () => {
@@ -12,14 +11,10 @@ const PoemDetailPage = () => {
   return (
     <div>
       <Header />
-      <Content>
-        <div className="h-20">top banners</div>
-      </Content>
-      <Content>
-        <h1>Poem Detail</h1>
-        <p>{poemTitle} </p>
-        <p>Poem Content: {poemText}</p> {/* 显示诗词内容 */}
-      </Content>
+      <div className="h-20">top banners</div>
+      <h1>Poem Detail</h1>
+      <p>{poemTitle} </p>
+      <p>Poem Content: {poemText}</p> {/* 显示诗词内容 */}
       <Footer />
     </div>
   )

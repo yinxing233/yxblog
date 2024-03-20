@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     setShowContactModal(!showContactModal)
   }
   return (
-    <div className="bg-gray-100">
+    <footer className="bg-gray-100">
       <div className="flex flex-col rounded-t-full bg-gradient-to-r from-yellow-50 via-cyan-50 to-lime-50">
         <div className="w-full draggable">
           <div className="container flex flex-col mx-auto">
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

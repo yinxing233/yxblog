@@ -1,6 +1,6 @@
 // pages/poem.tsx
 import Header from '@/components/header'
-import Content from '@/components/content'
+import WaveArea from '@/components/waveArea'
 import Footer from '@/components/footer'
 import Link from 'next/link'
 
@@ -15,13 +15,15 @@ const PoemListPage = () => {
   return (
     <div>
       <Header />
-      <Content>
+      <main className="pt-20">
         <h1>Poem List</h1>
         <h1>Poem List</h1>
         <h1>Poem List</h1>
         <h1>Poem List</h1>
-        <h1>Poem List</h1>
-        <ul>
+        <h1>
+          Poem List<WaveArea></WaveArea>
+        </h1>
+        <ul className="z-10">
           {poems.map((poem) => (
             <li key={poem.id}>
               {/* 将整个诗词对象传递给诗词详情页面 */}
@@ -36,7 +38,7 @@ const PoemListPage = () => {
             </li>
           ))}
         </ul>
-      </Content>
+      </main>
       <Footer />
     </div>
   )
